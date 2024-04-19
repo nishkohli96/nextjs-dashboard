@@ -8,9 +8,7 @@ interface Breadcrumb {
   active?: boolean;
 }
 
-export default function Breadcrumbs({
-  breadcrumbs,
-}: {
+export default function Breadcrumbs({ breadcrumbs }: {
   breadcrumbs: Breadcrumb[];
 }) {
   return (
@@ -21,10 +19,12 @@ export default function Breadcrumbs({
             key={breadcrumb.href}
             aria-current={breadcrumb.active}
             className={clsx(
-              breadcrumb.active ? 'text-gray-900' : 'text-gray-500',
+              breadcrumb.active ? 'text-gray-900' : 'text-gray-500'
             )}
           >
-            <Link href={breadcrumb.href}>{breadcrumb.label}</Link>
+            <Link href={breadcrumb.href}>
+              {breadcrumb.label}
+            </Link>
             {index < breadcrumbs.length - 1 ? (
               <span className="mx-3 inline-block">/</span>
             ) : null}

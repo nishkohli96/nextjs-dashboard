@@ -3,9 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import { LatestInvoice } from '@/app/lib/definitions';
-export default async function LatestInvoices({
-  latestInvoices,
-}: {
+export default async function LatestInvoices({ latestInvoices }: {
   latestInvoices: LatestInvoice[];
 }) {
   return (

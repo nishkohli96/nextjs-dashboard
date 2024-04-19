@@ -3,12 +3,10 @@ import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 import {
   CustomersTableType,
-  FormattedCustomersTable,
+  FormattedCustomersTable
 } from '@/app/lib/definitions';
 
-export default async function CustomersTable({
-  customers,
-}: {
+export default async function CustomersTable({ customers }: {
   customers: FormattedCustomersTable[];
 }) {
   return (
@@ -22,7 +20,7 @@ export default async function CustomersTable({
           <div className="inline-block min-w-full align-middle">
             <div className="overflow-hidden rounded-md bg-gray-50 p-2 md:pt-0">
               <div className="md:hidden">
-                {customers?.map((customer) => (
+                {customers?.map(customer => (
                   <div
                     key={customer.id}
                     className="mb-2 w-full rounded-md bg-white p-4"
@@ -38,7 +36,9 @@ export default async function CustomersTable({
                               width={28}
                               height={28}
                             />
-                            <p>{customer.name}</p>
+                            <p>
+                              {customer.name}
+                            </p>
                           </div>
                         </div>
                         <p className="text-sm text-gray-500">
@@ -49,15 +49,23 @@ export default async function CustomersTable({
                     <div className="flex w-full items-center justify-between border-b py-5">
                       <div className="flex w-1/2 flex-col">
                         <p className="text-xs">Pending</p>
-                        <p className="font-medium">{customer.total_pending}</p>
+                        <p className="font-medium">
+                          {customer.total_pending}
+                        </p>
                       </div>
                       <div className="flex w-1/2 flex-col">
                         <p className="text-xs">Paid</p>
-                        <p className="font-medium">{customer.total_paid}</p>
+                        <p className="font-medium">
+                          {customer.total_paid}
+                        </p>
                       </div>
                     </div>
                     <div className="pt-4 text-sm">
-                      <p>{customer.total_invoices} invoices</p>
+                      <p>
+                        {customer.total_invoices}
+                        {' '}
+                        invoices
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -84,7 +92,7 @@ export default async function CustomersTable({
                 </thead>
 
                 <tbody className="divide-y divide-gray-200 text-gray-900">
-                  {customers.map((customer) => (
+                  {customers.map(customer => (
                     <tr key={customer.id} className="group">
                       <td className="whitespace-nowrap bg-white py-5 pl-4 pr-3 text-sm text-black group-first-of-type:rounded-md group-last-of-type:rounded-md sm:pl-6">
                         <div className="flex items-center gap-3">
@@ -95,7 +103,9 @@ export default async function CustomersTable({
                             width={28}
                             height={28}
                           />
-                          <p>{customer.name}</p>
+                          <p>
+                            {customer.name}
+                          </p>
                         </div>
                       </td>
                       <td className="whitespace-nowrap bg-white px-4 py-5 text-sm">

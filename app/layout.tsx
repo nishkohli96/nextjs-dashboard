@@ -7,14 +7,14 @@ import { inter } from '@/app/ui/fonts';
  *
  * https://tailwindcss.com/docs/font-smoothing
  */
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout({ children }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
