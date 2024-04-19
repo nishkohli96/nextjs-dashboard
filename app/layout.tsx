@@ -1,3 +1,12 @@
+import '@/app/ui/global.css';
+import { inter } from '@/app/ui/fonts';
+
+/**
+ * Adding the Tailwind antialiased class smooths out the font.
+ * It's not necessary to use this class, but it adds a nice touch.
+ *
+ * https://tailwindcss.com/docs/font-smoothing
+ */
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   );
 }
