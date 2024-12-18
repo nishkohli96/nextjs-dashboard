@@ -2,6 +2,14 @@ import { Metadata } from 'next';
 import AcmeLogo from '@/app/ui/acme-logo';
 import LoginForm from '@/app/ui/login-form';
 
+/**
+ * Login Credentials -
+ * email: 'user@nextmail.com',
+ * password: '123456'
+ * 
+ * FYI this user is defined in lib/placeholder-data.js
+ */
+
 export const metadata: Metadata = {
   title: 'Login',
 };
