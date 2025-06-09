@@ -6,7 +6,8 @@ import clsx from 'clsx';
 import {
   UserGroupIcon,
   HomeIcon,
-  DocumentDuplicateIcon
+  DocumentDuplicateIcon,
+  DocumentTextIcon
 } from '@heroicons/react/24/outline';
 
 // Map of links to display in the side navigation.
@@ -26,6 +27,11 @@ const links = [
     name: 'Customers',
     href: '/dashboard/customers',
     icon: UserGroupIcon
+  },
+  {
+    name: 'Terms and Conditions',
+    href: '/dashboard/terms-and-conditions',
+    icon: DocumentTextIcon
   }
 ];
 
